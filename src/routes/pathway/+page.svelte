@@ -1,232 +1,279 @@
+<!-- <script lang="ts">
+	import type { PageData } from "./$types";
+
+ 
+    export let data:PageData
+    
+    
+    const jsonData = data.jsonData
+    
+    // const {jsonData:jdata} = data
+
+    
+
+</script> -->
+
 <script>
-    // This is a placeholder: after API established, send JSON w/o need to store as variable
     const jsonData = {
   "schedule": [
     {
       "week": 1,
       "topic": "HTML & CSS Fundamentals",
-      "description": "Learn the core building blocks of web pages: HTML for structure, CSS for styling.",
+      "description": "Learn the basics of HTML for structuring web pages and CSS for styling them. Understand the box model, flexbox, and grid layout.",
       "time_estimate": "5 hours",
       "resources": [
         {
+          "title": "HTML Dog",
+          "url": "https://htmldog.com/",
+          "type": "Website",
+          "description": "Comprehensive HTML tutorial with clear explanations and practical examples."
+        },
+        {
+          "title": "CSS Tricks",
+          "url": "https://css-tricks.com/",
+          "type": "Website",
+          "description": "A vast resource for CSS learning, with articles, tutorials, and code snippets."
+        },
+        {
           "title": "FreeCodeCamp - Responsive Web Design",
           "url": "https://www.freecodecamp.org/learn/responsive-web-design/",
-          "type": "Free",
-          "description": "A comprehensive course covering HTML, CSS, and basic responsive design principles."
-        },
-        {
-          "title": "MDN Web Docs - HTML & CSS",
-          "url": "https://developer.mozilla.org/en-US/docs/Web/HTML",
-          "type": "Free",
-          "description": "The official documentation for HTML and CSS, providing in-depth explanations and reference material."
-        },
-        {
-          "title": "Codecademy - Learn HTML & CSS",
-          "url": "https://www.codecademy.com/learn/learn-html-css",
-          "type": "Free (with subscription)",
-          "description": "An interactive and beginner-friendly platform to learn HTML and CSS."
+          "type": "Interactive Course",
+          "description": "Interactive course covering HTML, CSS, and responsive design fundamentals."
         }
       ],
       "projects": [
         {
-          "title": "Simple Portfolio Website",
-          "description": "Build a basic website showcasing your skills, projects, and contact information."
-        },
-        {
-          "title": "Responsive Landing Page",
-          "description": "Design a landing page for a hypothetical product or service, ensuring it adapts to different screen sizes."
+          "title": "Basic Landing Page",
+          "description": "Create a simple landing page with a header, main content, and a footer. Experiment with different CSS styles to create a visually appealing design."
         }
       ]
     },
     {
       "week": 2,
-      "topic": "JavaScript Fundamentals & DOM Manipulation",
-      "description": "Dive into JavaScript for adding interactivity to web pages. Learn how to interact with and manipulate the Document Object Model (DOM).",
+      "topic": "JavaScript for Web Development",
+      "description": "Explore JavaScript's role in web development, including DOM manipulation, event handling, and asynchronous operations. Learn about popular JavaScript libraries like jQuery.",
       "time_estimate": "5 hours",
       "resources": [
         {
           "title": "Eloquent JavaScript",
           "url": "https://eloquentjavascript.net/",
-          "type": "Free",
-          "description": "A classic book that provides a comprehensive introduction to JavaScript."
+          "type": "Book",
+          "description": "A comprehensive book covering JavaScript fundamentals and advanced concepts."
+        },
+        {
+          "title": "Mozilla Developer Network (MDN)",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+          "type": "Website",
+          "description": "The official JavaScript documentation with detailed explanations and examples."
         },
         {
           "title": "FreeCodeCamp - JavaScript Algorithms and Data Structures",
           "url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/",
-          "type": "Free",
-          "description": "An extensive course covering JavaScript algorithms, data structures, and problem-solving."
-        },
-        {
-          "title": "W3Schools - JavaScript Tutorial",
-          "url": "https://www.w3schools.com/js/default.asp",
-          "type": "Free",
-          "description": "A beginner-friendly tutorial covering JavaScript fundamentals and examples."
+          "type": "Interactive Course",
+          "description": "Interactive course covering JavaScript algorithms, data structures, and functional programming."
         }
       ],
       "projects": [
         {
-          "title": "Interactive Quiz",
-          "description": "Create a quiz with multiple-choice questions, feedback, and a score tracker."
-        },
-        {
-          "title": "Simple To-Do List",
-          "description": "Build a basic to-do list application with functionality to add, delete, and mark items as completed."
+          "title": "Interactive Form",
+          "description": "Build a form that collects user input, validates it, and provides feedback using JavaScript. Experiment with DOM manipulation and event handling."
         }
       ]
     },
     {
       "week": 3,
-      "topic": "Front-End Frameworks & Libraries",
-      "description": "Explore popular frameworks and libraries like React, Vue.js, or Angular to simplify front-end development and build more complex applications.",
+      "topic": "Front-End Frameworks and Libraries",
+      "description": "Learn about popular front-end frameworks like React, Angular, and Vue.js, and explore their advantages and use cases.",
       "time_estimate": "5 hours",
       "resources": [
         {
           "title": "React Documentation",
           "url": "https://reactjs.org/docs/getting-started.html",
-          "type": "Free",
-          "description": "Official documentation for React, providing tutorials, API references, and best practices."
-        },
-        {
-          "title": "Vue.js Documentation",
-          "url": "https://vuejs.org/",
-          "type": "Free",
-          "description": "Official documentation for Vue.js, covering installation, components, routing, and more."
+          "type": "Website",
+          "description": "Official React documentation with tutorials and guides."
         },
         {
           "title": "Angular Documentation",
           "url": "https://angular.io/docs",
-          "type": "Free",
-          "description": "Official documentation for Angular, providing a comprehensive guide to building applications."
+          "type": "Website",
+          "description": "Official Angular documentation with tutorials and guides."
+        },
+        {
+          "title": "Vue.js Documentation",
+          "url": "https://vuejs.org/guide/",
+          "type": "Website",
+          "description": "Official Vue.js documentation with tutorials and guides."
         },
         {
           "title": "The Complete 2023 Web Development Bootcamp",
           "url": "https://www.udemy.com/course/the-complete-web-development-bootcamp/",
-          "type": "Paid",
-          "description": "A comprehensive Udemy course covering HTML, CSS, JavaScript, React, Node.js, and more."
+          "type": "Paid Course",
+          "description": "Comprehensive web development course on Udemy covering HTML, CSS, JavaScript, React, Node.js, and more."
         }
       ],
       "projects": [
         {
-          "title": "Simple Blog Application",
-          "description": "Build a basic blog application with features to create, view, and edit posts. Use a front-end framework for component-based development."
-        },
-        {
-          "title": "Interactive Game",
-          "description": "Create a simple game using a front-end framework. Consider a game like Tic-Tac-Toe, Memory Match, or a simple arcade game."
+          "title": "Simple To-Do List App",
+          "description": "Build a basic to-do list application using your chosen front-end framework. Practice component-based development and data management."
         }
       ]
     },
     {
       "week": 4,
-      "topic": "Back-End Development & Server-Side Logic",
-      "description": "Learn how to build the back-end of web applications using languages like Python and frameworks like Flask or Django.",
+      "topic": "Back-End Fundamentals",
+      "description": "Understand the role of back-end development, including server-side programming languages (like Python), databases, and APIs.",
       "time_estimate": "5 hours",
       "resources": [
         {
           "title": "Flask Documentation",
           "url": "https://flask.palletsprojects.com/en/2.2.x/",
-          "type": "Free",
-          "description": "Official documentation for Flask, a lightweight and flexible Python web framework."
+          "type": "Website",
+          "description": "Official Flask documentation with tutorials and examples."
         },
         {
           "title": "Django Documentation",
           "url": "https://docs.djangoproject.com/en/4.2/",
-          "type": "Free",
-          "description": "Official documentation for Django, a comprehensive Python web framework."
+          "type": "Website",
+          "description": "Official Django documentation with tutorials and examples."
         },
         {
-          "title": "Real Python - Flask Tutorial",
-          "url": "https://realpython.com/flask-by-example/",
-          "type": "Free",
-          "description": "A well-structured Flask tutorial from Real Python."
+          "title": "MongoDB Documentation",
+          "url": "https://www.mongodb.com/docs",
+          "type": "Website",
+          "description": "Official MongoDB documentation with tutorials and guides."
+        },
+        {
+          "title": "Building a REST API with Flask",
+          "url": "https://realpython.com/flask-rest-api/",
+          "type": "Article",
+          "description": "Comprehensive tutorial on building a REST API with Flask."
         }
       ],
       "projects": [
         {
-          "title": "RESTful API with Flask",
-          "description": "Create a simple RESTful API using Flask to handle data requests and responses. For example, build an API for managing users, products, or tasks."
-        },
-        {
-          "title": "Blog with Backend & Database",
-          "description": "Expand your previous blog project by adding a back-end with database integration using Flask or Django."
+          "title": "Simple Blog API",
+          "description": "Create a basic REST API using your chosen back-end framework that allows users to create, read, update, and delete blog posts."
         }
       ]
     },
     {
       "week": 5,
-      "topic": "Database Integration & Data Persistence",
-      "description": "Learn how to interact with databases (e.g., SQL or NoSQL) to store and manage data for your web applications.",
+      "topic": "Front-End and Back-End Integration",
+      "description": "Learn how to connect your front-end application with your back-end API using techniques like AJAX and Fetch API. Implement data fetching and rendering.",
       "time_estimate": "5 hours",
       "resources": [
         {
-          "title": "SQL Tutorial - W3Schools",
-          "url": "https://www.w3schools.com/sql/",
-          "type": "Free",
-          "description": "A comprehensive tutorial covering SQL basics and common operations."
+          "title": "MDN - Fetch API",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",
+          "type": "Website",
+          "description": "Official documentation for the Fetch API."
         },
         {
-          "title": "MongoDB Documentation",
-          "url": "https://www.mongodb.com/docs/",
-          "type": "Free",
-          "description": "Official documentation for MongoDB, a popular NoSQL database."
-        },
-        {
-          "title": "PostgreSQL Tutorial",
-          "url": "https://www.postgresqltutorial.com/",
-          "type": "Free",
-          "description": "A detailed tutorial covering PostgreSQL, a powerful relational database."
+          "title": "AJAX Tutorial",
+          "url": "https://www.w3schools.com/ajax/",
+          "type": "Website",
+          "description": "Comprehensive AJAX tutorial with examples and explanations."
         }
       ],
       "projects": [
         {
-          "title": "E-commerce Website (Simplified)",
-          "description": "Build a basic e-commerce website with product listings, shopping carts, and order processing. Integrate a database to store product information and user data."
-        },
-        {
-          "title": "User Authentication System",
-          "description": "Implement a user authentication system with login, registration, and password management. Use a database to store user credentials."
+          "title": "To-Do List with API Integration",
+          "description": "Integrate your front-end to-do list application with the back-end API you created in the previous week. Allow users to add, delete, and edit tasks through the API."
         }
       ]
     },
     {
       "week": 6,
-      "topic": "Deployment & Hosting",
-      "description": "Learn how to deploy your web applications to the internet using hosting services and tools like Git.",
+      "topic": "Version Control with Git",
+      "description": "Learn Git and GitHub for version control and collaboration. Understand branching, merging, and resolving conflicts.",
       "time_estimate": "5 hours",
       "resources": [
         {
-          "title": "GitHub Pages",
-          "url": "https://pages.github.com/",
-          "type": "Free",
-          "description": "A simple and free hosting platform for static websites."
+          "title": "GitHub Learning Lab",
+          "url": "https://lab.github.com/",
+          "type": "Interactive Course",
+          "description": "Interactive Git and GitHub tutorials for beginners."
         },
         {
-          "title": "Netlify",
-          "url": "https://www.netlify.com/",
-          "type": "Free (with paid plans)",
-          "description": "A popular hosting platform with automated deployments and features for static and dynamic websites."
-        },
-        {
-          "title": "Heroku",
-          "url": "https://www.heroku.com/",
-          "type": "Free (with paid plans)",
-          "description": "A cloud platform for deploying web applications, especially for Python and Node.js applications."
+          "title": "Pro Git Book",
+          "url": "https://git-scm.com/book/en/v2",
+          "type": "Book",
+          "description": "A comprehensive guide to Git with detailed explanations and examples."
         }
       ],
       "projects": [
         {
-          "title": "Deploy Your Projects",
-          "description": "Deploy one or more of your completed projects to a hosting service, making them accessible on the internet."
+          "title": "Personal Portfolio Website",
+          "description": "Create a portfolio website showcasing your skills and projects. Use Git to track changes and collaborate if you're working with others."
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "topic": "Deployment and Hosting",
+      "description": "Learn about deploying your web application to a web server. Explore different hosting options like Netlify, Heroku, and AWS.",
+      "time_estimate": "5 hours",
+      "resources": [
+        {
+          "title": "Netlify Documentation",
+          "url": "https://docs.netlify.com/",
+          "type": "Website",
+          "description": "Official Netlify documentation with tutorials and guides."
+        },
+        {
+          "title": "Heroku Documentation",
+          "url": "https://devcenter.heroku.com/",
+          "type": "Website",
+          "description": "Official Heroku documentation with tutorials and guides."
+        },
+        {
+          "title": "AWS Documentation",
+          "url": "https://aws.amazon.com/documentation/",
+          "type": "Website",
+          "description": "Official AWS documentation with tutorials and guides."
+        }
+      ],
+      "projects": [
+        {
+          "title": "Deploy Your Project",
+          "description": "Deploy your portfolio website or any other project you've built to a chosen hosting platform. Learn about deployment workflows and configurations."
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "topic": "Advanced JavaScript Concepts",
+      "description": "Deepen your JavaScript knowledge with advanced concepts like closures, prototypes, asynchronous programming, and modules.",
+      "time_estimate": "5 hours",
+      "resources": [
+        {
+          "title": "You Don't Know JS",
+          "url": "https://github.com/getify/You-Dont-Know-JS",
+          "type": "Book Series",
+          "description": "A series of books exploring advanced JavaScript concepts in depth."
+        },
+        {
+          "title": "JavaScript.info",
+          "url": "https://javascript.info/",
+          "type": "Website",
+          "description": "Comprehensive JavaScript tutorials covering fundamentals and advanced topics."
+        }
+      ],
+      "projects": [
+        {
+          "title": "Interactive Game",
+          "description": "Build a simple interactive game using JavaScript. Experiment with canvas drawing, animation, and user interaction."
         }
       ]
     }
   ]
-};
+}
 </script>
+
 
 <header>
     <h1 class="text-4xl font-bold text-left mt-8 mx-20 max-w-3xl">
-        Your personalized path to ...
+        Your personalized path to learning:
     </h1>
 </header>
 
