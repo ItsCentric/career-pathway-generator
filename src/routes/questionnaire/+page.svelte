@@ -4,4 +4,4 @@
     export let data: PageData;
 </script>
 
-<Form data={data} />
+<Form data={Form} />

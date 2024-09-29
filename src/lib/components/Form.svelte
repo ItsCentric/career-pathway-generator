@@ -8,6 +8,7 @@
          superForm,
     } from "sveltekit-superforms";
     import { zodClient } from "sveltekit-superforms/adapters";
+    import Options from "$lib/components/options.svelte";
  
     export let data;//: SuperValidated<Infer<FormSchema>>;
  
@@ -18,12 +19,14 @@
  </script>
  
  <form method="POST" use:enhance>
-     <Form.Field {form} name="username">
+     <!-- <Form.Field {form} name="username">
          <Form.Control let:attrs>
              <Input {...attrs} bind:value={$formData.username} />
          </Form.Control>
          <Form.Description> This is your public display name.</Form.Description>
          <Form.FieldErrors />
      </Form.Field>
-     <Form.Button>Submit</Form.Button>
+     <Form.Button>Submit</Form.Button> -->
+     <Options />
+    
  </form>
