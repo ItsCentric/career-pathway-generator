@@ -7,15 +7,11 @@ import { formSchema } from "$lib/schemas";
 
 
 export const actions:Actions = {
-    default: async (event) => {
-        const form = await superValidate(event,zod(formScheme));
-        if(!form.valid) {
-            return fail(400, {
-                form,
-            });
-        }
-        return {
-            form,
-        };
+    default: async ({fetch, request}) => {
+        const formdata = await request.formData();
+        const response = await fetch('/api/gemini', {
+            method: 'POST',
+            body: formdata,
+          });
     },
 };
