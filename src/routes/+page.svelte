@@ -7,3 +7,5 @@
 	Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
 </p>
 <Button on:click={() => alert('Hello there!')}>Click me</Button>
+
+<Button on:click={() => alert('Im learning :)')}>Click here</Button>
