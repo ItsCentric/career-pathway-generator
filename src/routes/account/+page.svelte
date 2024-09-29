@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import * as Card from '$lib/components/ui/card';
+	import Button from '$lib/components/ui/button/button.svelte';
 
 	export let data: PageData;
 	const { user, responses } = data;
@@ -8,9 +9,11 @@
 
 <main class="container h-full">
 	<section class="h-1/3">
-		<div class="absolute left-0 top-0 h-1/3 w-full bg-red-200"></div>
-		<div class="relative z-10 flex h-1/3 w-full items-center justify-center">
-			<h1 class="text-center text-3xl font-bold">Welcome, {user?.email}</h1>
+		<div class="relative z-10 flex h-1/3 w-full flex-col items-center justify-center">
+			<h1 class="mb-4 text-center text-3xl font-bold">Welcome, {user?.email}</h1>
+			{#if responses.length === 0}
+				<Button size="lg" href="/questionnaire">Start your journey</Button>
+			{/if}
 		</div>
 	</section>
 	<section class="py-4">
