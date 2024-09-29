@@ -31,5 +31,27 @@ export const actions = {
 		}
 
 		return redirect(303, '/login/confirm');
+	},
+	signin: async (event) => {
+		const { supabase } = event.locals;
+		const form = await superValidate(event, zod(signUpFormSchema));
+		if (!form.valid) {
+			return fail(400, {
+				form
+			});
+		}
+		const { error: signInError } = await supabase.auth.signInWithPassword({
+			email: form.data.email,
+			password: form.data.password
+		});
+		if (signInError) {
+			return fail(500, {
+				form
+			});
+		}
+
+		return {
+			form
+		};
 	}
 } satisfies Actions;

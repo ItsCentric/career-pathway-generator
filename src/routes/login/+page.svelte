@@ -14,7 +14,7 @@
 	const { form: formData, enhance } = form;
 </script>
 
-<main class="container mx-auto">
+<main class="container mx-auto mt-64">
 	<div class="mx-auto max-w-sm">
 		<h1 class="mb-2 text-2xl font-bold">Login</h1>
 		<form method="post" use:enhance class="">
@@ -31,7 +31,10 @@
 					<Form.FieldErrors />
 				</Form.Control>
 			</Form.Field>
-			<Form.Button formaction="?/signup" class="mt-4">Sign up</Form.Button>
+			<div class="grid grid-cols-2 gap-4">
+				<Form.Button formaction="?/signup" class="mt-4">Sign up</Form.Button>
+				<Form.Button formaction="?/signin" class="mt-4">Sign in</Form.Button>
+			</div>
 		</form>
 	</div>
 </main>
